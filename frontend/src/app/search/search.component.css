@@ -1,0 +1,21 @@
+.form-control-borderless {
+  border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.list-group{
+  max-height: 25rem;
+  margin-bottom: 10px;
+  overflow-y:scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.profile-img {
+  max-width: 64px;
+  max-height: 64px;
+}

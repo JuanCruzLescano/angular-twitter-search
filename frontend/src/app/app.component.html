@@ -1,12 +1,14 @@
-<nav class="navbar navbar-light navbar-expand-lg" style="background-color: #e3f2fd">
-  <a href="/" class="navbar-brand"> Twitter Search </a>
+<nav class="navbar navbar-light navbar-expand-lg bg-light" >
+  <a routerLink='/' class="navbar-brand"> Twitter Search </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item"><a href="/busqueda" class="nav-link"> Busqueda </a></li>
-      <li class="nav-item"><a href="/historial" class="nav-link"> Historial </a></li>
+      <li class="nav-item"><a routerLink="/busqueda" class="nav-link"> Busqueda </a></li>
+      <li class="nav-item"><a routerLink="/historial" class="nav-link"> Historial </a></li>
     </ul>
   </div>
 </nav>
+
+<router-outlet></router-outlet>
