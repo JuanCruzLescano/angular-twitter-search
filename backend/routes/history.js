@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   const searchTerms = req.body.searchTerms.replaceAll('%20', ' ');
-  console.log(searchTerms)
+  
   if(!searchTerms) {
     res.status(400).send({ text: 'Invalid data' })
   }

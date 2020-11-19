@@ -21,4 +21,8 @@ export class TwitterService {
   postHistory(searchTerms: string) {
     return this.http.post(`${this.url}/history`, {searchTerms}).toPromise();
   }
+
+  getHistory() {
+    return this.http.get(`${this.url}/history`)
+  }
 }

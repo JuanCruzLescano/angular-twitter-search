@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 app.use('/', routes)
 
 // Port & connection with db
-conn.sync({ force: true }).then(() => {
+conn.sync({ force: false }).then(() => {
   app.listen(3001, () => {
     console.log('Server is running on localhost:3001')
   })

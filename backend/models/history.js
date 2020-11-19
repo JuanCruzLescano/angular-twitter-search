@@ -5,6 +5,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
       unique: false
+    },
+    createdAt: {
+      type: DataTypes.DATEONLY
     }
   });
 

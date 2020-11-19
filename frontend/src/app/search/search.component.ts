@@ -14,7 +14,7 @@ export class SearchComponent implements OnInit {
 
   tweets: Object[] = []
 
-  searchTerms: string = 'argentina'
+  searchTerms: string = ''
 
   async searchTweets(searchTerms: string) {
     try {

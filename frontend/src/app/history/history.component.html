@@ -1,1 +1,22 @@
-<p>history works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 mt-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title">Search history</div>
+          <div class="list-group">
+            <li
+              class="list-group-item flex-column align-items-start"
+              *ngFor='let item of history'
+            >
+              <div class="d-flex w-100 justify-content-between align-items-center">
+                <p class="mb-1">{{ item.searchTerms }}</p>
+                <small>{{ item.createdAt.slice(0, 10) }}</small>
+              </div>
+            </li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
