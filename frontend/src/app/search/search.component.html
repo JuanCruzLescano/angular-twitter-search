@@ -3,13 +3,13 @@
     <div class="col-md-12 mt-4">
       <div class="card">
         <div class="card-body">
-          <form class="card card-sm">
+          <form class="card card-sm" id="input-background">
             <div class="card-body row no-gutters align-items-center">
               <div class="col-auto">
                 <i class="fas fa-search h4 text-body"></i>
               </div>
               <!--end of col-->
-              <div class="col">
+              <div class="col" >
                 <input
                   class="form-control form-control-lg form-control-borderless"
                   type="search"
@@ -20,9 +20,9 @@
               <!--end of col-->
               <div class="col-auto">
                 <button
-                  class="btn btn-lg btn-primary"
+                  class="btn btn-lg btn-primary ml-2"
                   type="submit"
-                  (click)="searchTweets(searchTerms.value)"
+                  (click)="searchTweets(searchTerms.value); postHistory(searchTerms.value)"
                 >
                   Search
                 </button>
@@ -31,12 +31,12 @@
             </div>
           </form>
           <div class="list-group">
-            <li class="list-group-item list-group-item-action flex-column align-items-start" *ngFor='let tweet of tweets'>
+            <li class="list-group-item flex-column align-items-start" *ngFor='let tweet of tweets'>
               <div class="d-flex w-100 justify-content-start">
-                <h5 class="mb-1">{{tweet['user']['name']}}</h5>
+                <h5 class="mb-1 font-weight-bold">{{tweet['user']['name']}}</h5>
               </div>
               <div class="d-flex w-100 justify-content-start">
-                <img src="{{tweet['user']['profile_image_url']}}" alt="profileimage" class="rounded img-fluid img-thumbnail profile-img mr-2">
+                <img src="{{tweet['user']['profile_image_url']}}" alt="profileimage" class="rounded img-fluid mr-2" id="profile-img">
                 <p class="mb-1">{{tweet['full_text']}}</p>
               </div>
             </li>

@@ -17,4 +17,8 @@ export class TwitterService {
     const data: any = this.http.get(`${this.url}/twitter/${searchTerms}`).toPromise();
     return data
   }
+
+  postHistory(searchTerms: string) {
+    return this.http.post(`${this.url}/history`, {searchTerms}).toPromise();
+  }
 }

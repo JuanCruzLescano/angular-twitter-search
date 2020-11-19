@@ -8,12 +8,10 @@ import { TwitterService } from '../services/twitter.service';
 })
 export class SearchComponent implements OnInit {
 
-  constructor(private twitter: TwitterService) { 
+  constructor(private twitter: TwitterService) { }
 
-  }
+  ngOnInit(): void { }
 
-  ngOnInit(): void {
-  }
   tweets: Object[] = []
 
   searchTerms: string = 'argentina'
@@ -21,10 +19,14 @@ export class SearchComponent implements OnInit {
   async searchTweets(searchTerms: string) {
     try {
       this.tweets = await this.twitter.getTweets(searchTerms);
-      console.log(this.tweets)
+      console.log(this.tweets);
     } catch (error) {
       console.error(error)
     }
+    return false;
+  }
+  async postHistory(searchTerms: string) {
+    const history = await this.twitter.postHistory(searchTerms);
     return false;
   }
 }

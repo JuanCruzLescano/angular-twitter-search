@@ -8,10 +8,6 @@
   box-shadow: none;
 }
 
-#input-background {
-  background-color: #C4FBFF;
-}
-
 .list-group{
   max-height: 25rem;
   margin-bottom: 10px;
@@ -19,7 +15,7 @@
   -webkit-overflow-scrolling: touch;
 }
 
-#profile-img {
+.profile-img {
   max-width: 64px;
   max-height: 64px;
 }

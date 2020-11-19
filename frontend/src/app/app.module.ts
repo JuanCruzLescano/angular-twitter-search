@@ -8,7 +8,6 @@ import { SearchComponent } from './search/search.component';
 import { HistoryComponent } from './history/history.component';
 import { Route, RouterModule } from '@angular/router';
 import { TwitterService } from './services/twitter.service';
-import { HistoryService } from './services/history.service';
 
 const routes: Route[] = [
   {
@@ -33,7 +32,7 @@ const routes: Route[] = [
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [TwitterService, HistoryService],
+  providers: [TwitterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
