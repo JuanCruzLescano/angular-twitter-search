@@ -17,16 +17,24 @@ export class SearchComponent implements OnInit {
   searchTerms: string = ''
 
   async searchTweets(searchTerms: string) {
+    if (searchTerms.includes('#') || searchTerms.includes('@')) {
+      alert('No se pueden buscar usuarios ni hashtags')
+    } else {
     try {
       this.tweets = await this.twitter.getTweets(searchTerms);
       console.log(this.tweets);
     } catch (error) {
       console.error(error)
     }
+  }
     return false;
   }
   async postHistory(searchTerms: string) {
-    const history = await this.twitter.postHistory(searchTerms);
+    if (searchTerms.includes('#') || searchTerms.includes('@')) {
+      return false
+    } else {
+      const history = await this.twitter.postHistory(searchTerms);
+    }
     return false;
   }
 }

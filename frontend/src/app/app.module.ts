@@ -11,6 +11,11 @@ import { TwitterService } from './services/twitter.service';
 
 const routes: Route[] = [
   {
+    path: '',
+    redirectTo: '/busqueda',
+    pathMatch: 'full'
+  },
+  {
     path: 'busqueda',
     component: SearchComponent
   },
