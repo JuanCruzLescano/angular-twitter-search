@@ -22,7 +22,7 @@
   DB_USER=usuariodepostgres
   DB_PASSWORD=contraseñapostgres
   DB_HOST=localhost
-  DB_NAME=TuContraseña12345
+  DB_NAME=twitter-search
 
   TWITTER_CONSUMER_KEY=L34y0Ez744ifincFlkzqLus57
   TWITTER_CONSUMER_SECRET=c99M7ymvB5B74p16aAu70YZPbJaRx0VP48hW2UJoN8KNOs7hr8
